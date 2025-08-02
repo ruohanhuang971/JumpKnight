@@ -1,13 +1,15 @@
 class_name RunState
 extends PlayerState
+@onready var run_sfx: AudioStreamPlayer = $"../../Sfx/Run"
 
 
 func enter_state() -> void:
 	state_name = "Run"
+	run_sfx.play()
 
 
 func exit_state() -> void:
-	pass
+	run_sfx.stop()
 
 
 func update_state(delta: float) -> void:
@@ -28,4 +30,5 @@ func handle_animation():
 	player.animation_tree["parameters/conditions/idle"] = false
 	player.animation_tree["parameters/conditions/jump"] = false
 	player.animation_tree["parameters/conditions/is_falling"] = false
+	player.animation_tree["parameters/conditions/is_die"] = false
 	player.handle_flipH()

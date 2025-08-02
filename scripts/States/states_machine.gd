@@ -7,3 +7,4 @@ extends Node
 @onready var jump: Node = $Jump
 @onready var jump_peak: Node = $JumpPeak
 @onready var fall: Node = $Fall
+@onready var die: Die = $Die

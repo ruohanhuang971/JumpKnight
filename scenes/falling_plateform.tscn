@@ -1,0 +1,99 @@
+[gd_scene load_steps=14 format=3 uid="uid://dm1lkthtlptwl"]
+
+[ext_resource type="Texture2D" uid="uid://c10as6wvntdlo" path="res://assets/Sprites/PixelFantasy_Caves_1.0/mainlev_build.png" id="1_6ico6"]
+[ext_resource type="Script" uid="uid://cgm7fjm20r8tl" path="res://scripts/falling_plateform.gd" id="1_7as6f"]
+
+[sub_resource type="Curve2D" id="Curve2D_6ico6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l0gh6"]
+size = Vector2(16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8jhao"]
+atlas = ExtResource("1_6ico6")
+region = Rect2(832, 400, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7as6f"]
+atlas = ExtResource("1_6ico6")
+region = Rect2(992, 400, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cwgk0"]
+atlas = ExtResource("1_6ico6")
+region = Rect2(848, 400, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l0gh6"]
+atlas = ExtResource("1_6ico6")
+region = Rect2(976, 400, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vtfy3"]
+atlas = ExtResource("1_6ico6")
+region = Rect2(848, 400, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gldlo"]
+atlas = ExtResource("1_6ico6")
+region = Rect2(976, 400, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xgxqb"]
+atlas = ExtResource("1_6ico6")
+region = Rect2(976, 224, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gldlo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8jhao")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7as6f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cwgk0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l0gh6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vtfy3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gldlo")
+}],
+"loop": false,
+"name": &"Break",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xgxqb")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ico6"]
+size = Vector2(16, 2)
+
+[node name="Falling Plateform" type="Path2D"]
+curve = SubResource("Curve2D_6ico6")
+script = ExtResource("1_7as6f")
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D"]
+shape = SubResource("RectangleShape2D_l0gh6")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AnimatableBody2D"]
+sprite_frames = SubResource("SpriteFrames_gldlo")
+animation = &"Break"
+autoplay = "Idle"
+frame = 5
+frame_progress = 1.0
+
+[node name="PlayerDetectionArea" type="Area2D" parent="AnimatableBody2D"]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D/PlayerDetectionArea"]
+position = Vector2(0, -9)
+shape = SubResource("RectangleShape2D_6ico6")
+
+[connection signal="body_entered" from="AnimatableBody2D/PlayerDetectionArea" to="." method="_on_player_detection_area_body_entered"]

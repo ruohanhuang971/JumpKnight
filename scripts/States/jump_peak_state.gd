@@ -11,4 +11,6 @@ func exit_state() -> void:
 
 
 func update_state(delta: float) -> void:
+	player.handle_falling()
+	
 	player.change_state(states.fall)

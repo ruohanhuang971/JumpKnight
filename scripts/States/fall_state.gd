@@ -11,8 +11,12 @@ func exit_state() -> void:
 
 
 func update_state(delta: float) -> void:
-	player.handle_gravity(delta)
+	player.handle_gravity(delta, player.GRAVITY_FALL)
+	player.handle_fall_velocity()
 	player.handle_landing()
+	player.handle_jump()
+	player.handle_jump_buffer()
+	
 	handle_animation()
 
 
