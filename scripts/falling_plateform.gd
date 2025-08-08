@@ -1,7 +1,7 @@
-extends Path2D
+extends StaticBody2D
 
-@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatableBody2D/AnimatedSprite2D
-@onready var collision_shape_2d: CollisionShape2D = $AnimatableBody2D/CollisionShape2D
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
 var shake_timer: SceneTreeTimer
 var respawn_timer: SceneTreeTimer
 var time: float = 0.0
