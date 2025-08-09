@@ -16,7 +16,6 @@ var _random_number_gen := RandomNumberGenerator.new()
 var index := -1
 
 
-# We are going to use this logic to test, will be removed later
 func _ready() -> void:
 	await get_tree().create_timer(1.0).timeout
 	scene_text = load_scene_text()
@@ -35,6 +34,7 @@ func show_text():
 	var new_index = _random_number_gen.randf_range(0, selected_text.size())
 	while new_index == index: 
 		new_index = _random_number_gen.randf_range(0, selected_text.size())
+	index = new_index
 	var line = selected_text[new_index]
 	update_message(line)
 
