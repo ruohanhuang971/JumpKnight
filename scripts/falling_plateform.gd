@@ -28,7 +28,7 @@ func plateform_logic() -> void:
 	animated_sprite_2d.set_visible(false)
 	collision_shape_2d.set_disabled(true)
 	
-	respawn_timer = get_tree().create_timer(5.0)
+	respawn_timer = get_tree().create_timer(1.5)
 	await respawn_timer.timeout
 	shake_timer = get_tree().create_timer(1.0)
 	animated_sprite_2d.play("Idle")
