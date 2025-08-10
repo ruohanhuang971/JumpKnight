@@ -67,7 +67,7 @@ func update_message(message: String) -> void:
 	content.visible_characters = 0
 	type_timer.start()
 	_playing_voice = true
-	voice_player.play(0)
+	voice_player.custom_play(0)
 
 
 func _on_type_typer_timeout() -> void:
@@ -82,7 +82,7 @@ func _on_type_typer_timeout() -> void:
 
 func _on_audio_stream_player_finished() -> void:
 	if _playing_voice:
-		voice_player.play(0)
+		voice_player.custom_play(0)
 
 
 func _on_pause_timer_timeout() -> void:

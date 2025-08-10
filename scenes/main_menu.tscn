@@ -1,46 +1,206 @@
-[gd_scene load_steps=10 format=3 uid="uid://8puaa6ix7j4e"]
+[gd_scene load_steps=10 format=4 uid="uid://8puaa6ix7j4e"]
 
 [ext_resource type="Script" uid="uid://c8812xxnqd1u" path="res://scripts/main_menu.gd" id="1_bqqt6"]
-[ext_resource type="Texture2D" uid="uid://bxlx8m6d58h1x" path="res://assets/Sprites/PixelFantasy_Caves_1.0/background1.png" id="1_l6cm7"]
-[ext_resource type="Texture2D" uid="uid://dcko8og6qkp2a" path="res://assets/Sprites/PixelFantasy_Caves_1.0/background3.png" id="2_ekxnf"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bqqt6"]
-texture = ExtResource("1_l6cm7")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ekxnf"]
-texture = ExtResource("2_ekxnf")
+[ext_resource type="FontFile" uid="uid://28sifdg4rulo" path="res://assets/Fonts/ThaleahFat.ttf" id="4_wu84c"]
+[ext_resource type="Texture2D" uid="uid://uew2srun2m3x" path="res://assets/Sprites/SpriteSheets/Rocks-Tileset-edited.png" id="5_8ln24"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ekxnf"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ekxnf"]
-bg_color = Color(0.606625, 0.776341, 0.850998, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
+bg_color = Color(0.788444, 0.815909, 0.900559, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_detail = 1
 shadow_color = Color(5.05373e-07, 0.278599, 0.462989, 0.6)
-shadow_size = 5
 shadow_offset = Vector2(0, 3)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bqqt6"]
-bg_color = Color(0.404674, 0.601935, 0.68612, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
+bg_color = Color(0.635294, 0.678431, 0.815686, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.12549, 0.0901961, 0.180392, 1)
 shadow_color = Color(5.05373e-07, 0.278599, 0.462989, 0.6)
-shadow_size = 5
 shadow_offset = Vector2(0, 3)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vue75"]
-bg_color = Color(0.733933, 0.853256, 0.906709, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-shadow_color = Color(5.05373e-07, 0.278599, 0.462989, 0.6)
-shadow_size = 5
+bg_color = Color(0.636418, 0.679252, 0.814572, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.12549, 0.0901961, 0.180392, 1)
+corner_detail = 1
+shadow_color = Color(0.118427, 0.156378, 0.308359, 1)
 shadow_offset = Vector2(0, 3)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rtw2f"]
+texture = ExtResource("5_8ln24")
+2:0/0 = 0
+2:0/0/z_index = -1
+3:0/0 = 0
+3:0/0/z_index = -1
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+8:0/0/z_index = -1
+10:0/0 = 0
+10:0/0/z_index = -1
+11:0/0 = 0
+11:0/0/z_index = -1
+14:0/0 = 0
+14:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8, -8, -8)
+15:0/0 = 0
+15:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8, -8, -8)
+16:0/0 = 0
+16:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8, -8, -8)
+17:0/0 = 0
+17:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8, -8, -8)
+18:0/0 = 0
+18:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8, -8, -8)
+19:0/0 = 0
+19:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8, -8, -8)
+20:0/0 = 0
+20:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8, -8, -8)
+21:0/0 = 0
+21:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8, -8, -8)
+22:0/0 = 0
+22:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8, -8, -8)
+23:0/0 = 0
+23:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8, -8, -8)
+10:1/0 = 0
+10:1/0/z_index = -1
+11:1/0 = 0
+11:1/0/z_index = -1
+14:1/0 = 0
+14:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8, -8, -8)
+15:1/0 = 0
+15:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8, -8, -8)
+16:1/0 = 0
+16:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8, -8, -8)
+17:1/0 = 0
+17:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8, -8, -8)
+18:1/0 = 0
+18:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8, -8, -8)
+19:1/0 = 0
+19:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8, -8, -8)
+20:1/0 = 0
+20:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8, -8, -8)
+21:1/0 = 0
+21:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8, -8, -8)
+22:1/0 = 0
+22:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8, -8, -8)
+23:1/0 = 0
+23:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8, -8, -8)
+0:2/0 = 0
+0:2/0/z_index = -1
+1:2/0 = 0
+1:2/0/z_index = -1
+2:2/0 = 0
+2:2/0/z_index = -1
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+10:2/0 = 0
+10:2/0/z_index = -1
+11:2/0 = 0
+11:2/0/z_index = -1
+14:2/0 = 0
+14:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8, -8, -8)
+15:2/0 = 0
+15:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8, -8, -8)
+16:2/0 = 0
+16:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8, -8, -8)
+17:2/0 = 0
+17:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8, -8, -8)
+18:2/0 = 0
+18:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8, -8, -8)
+19:2/0 = 0
+19:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8, -8, -8)
+20:2/0 = 0
+20:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8, -8, -8)
+21:2/0 = 0
+21:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8, -8, -8)
+22:2/0 = 0
+22:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8, -8, -8)
+23:2/0 = 0
+23:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8, -8, -8)
+24:2/0 = 0
+24:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8, -8, -8)
+3:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+6:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -2, 8, -2, 8, 1, -8, 1)
+7:3/0 = 0
+7:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -2, 8, -2, 8, 1, -8, 1)
+14:3/0 = 0
+14:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8, -8, -8)
+15:3/0 = 0
+15:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8, -8, -8)
+16:3/0 = 0
+16:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8, -8, -8)
+17:3/0 = 0
+17:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8, -8, -8)
+18:3/0 = 0
+18:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8, -8, -8)
+19:3/0 = 0
+19:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8, -8, -8)
+20:3/0 = 0
+20:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8, -8, -8)
+21:3/0 = 0
+21:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8, -8, -8)
+22:3/0 = 0
+22:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8, -8, -8)
+23:3/0 = 0
+23:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8, -8, -8)
+24:3/0 = 0
+24:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8, -8, -8)
+6:4/0 = 0
+6:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -6, -8, -6)
+7:4/0 = 0
+7:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -6, -8, -6)
+18:4/0 = 0
+18:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8, -8, -8)
+19:4/0 = 0
+19:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8, -8, -8)
+20:4/0 = 0
+20:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8, -8, -8)
+21:4/0 = 0
+21:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8, -8, -8)
+22:4/0 = 0
+22:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8, -8, -8)
+14:5/0 = 0
+14:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, 8, -8, 8, 8, -8, 8)
+16:5/0 = 0
+16:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, -8, -8, 8, 8, -8, 8)
+18:5/0 = 0
+18:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, -8)
+20:5/0 = 0
+20:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, -8, 8, -8, -8)
+8:3/0 = 0
+8:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -2, 8, -2, 8, 1, -8, 1)
+8:4/0 = 0
+8:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -6, -8, -6)
+9:3/0 = 0
+9:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2.03602, -1.98124, 1.98124, -1.9995, 1.97845, 5.03605, -1.9995, 5.01244)
+9:4/0 = 0
+9:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-1.98124, -8, 1.98124, -8, 1.9995, 2.01776, -1.9995, 1.98124)
+10:3/0 = 0
+10:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4.02747, -2.02182, 3.99512, -1.95712, 3.99512, 4.9656, -3.96277, 5.06264)
+10:4/0 = 0
+10:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3.99512, -8, 3.99512, -8, 3.96277, 1.95712, -3.93042, 1.98947)
+
+[sub_resource type="TileSet" id="TileSet_oa1go"]
+physics_layer_0/collision_layer = 1
+sources/5 = SubResource("TileSetAtlasSource_rtw2f")
 
 [node name="Main Menu" type="Control"]
 layout_mode = 3
@@ -50,24 +210,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_bqqt6")
-
-[node name="Panel2" type="Panel" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_bqqt6")
-
-[node name="Panel" type="Panel" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_ekxnf")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -82,12 +224,13 @@ offset_right = 174.0
 offset_bottom = 140.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 15
+theme_override_constants/separation = 16
 
 [node name="Button" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.192157, 0.368627, 0.431373, 1)
-theme_override_font_sizes/font_size = 36
+theme_override_colors/font_color = Color(0.152941, 0.160784, 0.309804, 1)
+theme_override_fonts/font = ExtResource("4_wu84c")
+theme_override_font_sizes/font_size = 50
 theme_override_styles/focus = SubResource("StyleBoxEmpty_ekxnf")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ekxnf")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_bqqt6")
@@ -96,8 +239,9 @@ text = "Start Game"
 
 [node name="Button2" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.192157, 0.368627, 0.431373, 1)
-theme_override_font_sizes/font_size = 36
+theme_override_colors/font_color = Color(0.152941, 0.160784, 0.309804, 1)
+theme_override_fonts/font = ExtResource("4_wu84c")
+theme_override_font_sizes/font_size = 50
 theme_override_styles/focus = SubResource("StyleBoxEmpty_ekxnf")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ekxnf")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_bqqt6")
@@ -107,8 +251,9 @@ text = "Options
 
 [node name="Button3" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.192157, 0.368627, 0.431373, 1)
-theme_override_font_sizes/font_size = 36
+theme_override_colors/font_color = Color(0.152941, 0.160784, 0.309804, 1)
+theme_override_fonts/font = ExtResource("4_wu84c")
+theme_override_font_sizes/font_size = 50
 theme_override_styles/focus = SubResource("StyleBoxEmpty_ekxnf")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ekxnf")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_bqqt6")
@@ -129,10 +274,20 @@ offset_right = 211.5
 offset_bottom = -73.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_offset_y = 5
-theme_override_font_sizes/font_size = 64
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.12549, 0.0901961, 0.180392, 1)
+theme_override_constants/shadow_offset_y = 11
+theme_override_fonts/font = ExtResource("4_wu84c")
+theme_override_font_sizes/font_size = 136
 text = "JUMP KNIGHT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Rocks" type="TileMapLayer" parent="."]
+position = Vector2(402, 344)
+scale = Vector2(4, 4)
+tile_map_data = PackedByteArray("AAD3/wMABQAPAAEAAAD3/wQABQAPAAEAAAD3/wUABQAPAAEAAAD3/wYABQAPAAEAAAD4/wMABQAPAAEAAAD4/wQABQAPAAEAAAD4/wUABQAPAAEAAAD4/wYABQAPAAEAAAD5/wQABQAPAAEAAAD5/wUABQAPAAEAAAD5/wYABQAPAAEAAAD6/wQABQAPAAEAAAD6/wUABQAPAAEAAAD6/wYABQAPAAEAAAD7/wQABQAPAAEAAAD7/wUABQAPAAEAAAD7/wYABQAPAAEAAAD8/wQABQAPAAEAAAD8/wUABQAPAAEAAAD8/wYABQAPAAEAAAD9/wQABQAPAAEAAAD9/wUABQAPAAEAAAD9/wYABQAPAAEAAAD+/wMABQAPAAAAAAD+/wQABQAPAAEAAAD+/wUABQAPAAEAAAD+/wYABQAPAAEAAAD//wQABQAPAAEAAAD//wUABQAPAAEAAAD//wYABQAPAAEAAAAAAAMABQAPAAAAAAAAAAQABQAPAAEAAAAAAAUABQAPAAEAAAAAAAYABQAPAAEAAAABAAQABQAPAAEAAAABAAUABQAPAAEAAAABAAYABQAPAAEAAAACAAMABQAPAAAAAAACAAQABQAPAAEAAAACAAUABQAPAAEAAAACAAYABQAPAAEAAAADAAMABQAPAAAAAAADAAQABQAPAAEAAAADAAUABQAPAAEAAAADAAYABQAPAAEAAAAEAAMABQAPAAAAAAAEAAQABQAPAAEAAAAEAAUABQAPAAEAAAAEAAYABQAPAAEAAAAFAAQABQAPAAEAAAAFAAUABQAPAAEAAAAFAAYABQAPAAEAAAAGAAQABQAPAAEAAAAGAAUABQAPAAEAAAAGAAYABQAPAAEAAAAHAAQABQAPAAEAAAAHAAUABQAPAAEAAAAHAAYABQAPAAEAAAAIAAQABQAPAAEAAAAIAAUABQAPAAEAAAAIAAYABQAPAAEAAAAJAAEABQAKAAEAAAAJAAIABQAKAAIAAAAJAAMABQAPAAAAAAAJAAQABQAPAAEAAAAJAAUABQAPAAEAAAAJAAYABQAPAAEAAAAKAAEABQALAAEAAAAKAAIABQALAAIAAAAKAAMABQAPAAAAAAAKAAQABQAPAAEAAAAKAAUABQAPAAEAAAAKAAYABQAPAAEAAAALAAQABQAPAAEAAAALAAUABQAPAAEAAAALAAYABQAPAAEAAAAMAAQABQAPAAEAAAAMAAUABQAPAAEAAAAMAAYABQAPAAEAAAANAAQABQAPAAEAAAANAAUABQAPAAEAAAANAAYABQAPAAEAAAAOAAQABQAPAAEAAAAOAAUABQAPAAEAAAAOAAYABQAPAAEAAAAPAAQABQAPAAEAAAAPAAUABQAPAAEAAAAPAAYABQAPAAEAAAD3/wIABQAPAAEAAAD4/wIABQAPAAEAAAD5/wMABQAPAAAAAAD6/wMABQAPAAAAAAD7/wMABQAPAAAAAAD8/wMABQAPAAAAAAD9/wMABQAPAAAAAAD+/wIABQAIAAAAAAD//wMABQAPAAAAAAAAAAIABQADAAAAAAABAAMABQAPAAAAAAACAAIABQAAAAIAAAADAAIABQABAAIAAAAEAAIABQACAAIAAAAFAAMABQAPAAAAAAAGAAMABQAPAAAAAAAHAAMABQAPAAAAAAAIAAMABQAPAAAAAAAJAAAABQAKAAAAAAAKAAAABQALAAAAAAALAAMABQAPAAAAAAAMAAMABQAPAAAAAAANAAMABQAPAAAAAAAOAAMABQAPAAAAAAAPAAMABQAPAAAAAAAEAPv/BQASAAUAAAADAPr/BQASAAUAAAAEAPr/BQAPAAEAAAAFAPr/BQAPAAEAAAAGAPr/BQAPAAEAAAAHAPr/BQAPAAEAAAAIAPr/BQAPAAEAAAAJAPr/BQAPAAEAAAAKAPr/BQAPAAEAAAALAPr/BQAPAAEAAAAFAPv/BQAPAAIAAAAGAPv/BQAPAAIAAAAHAPv/BQAPAAIAAAAIAPv/BQAPAAIAAAAJAPv/BQAPAAIAAAAKAPz/BQAOAAEAAAAKAP3/BQASAAUAAAAKAPv/BQAPAAEAAAALAPv/BQAPAAEAAAALAPz/BQAPAAEAAAALAP3/BQAPAAIAAAD///r/BQAQAAAAAAD///v/BQAQAAIAAAD+//v/BQAPAAIAAAD9//v/BQAPAAIAAAD8//v/BQAPAAIAAAD7//v/BQAPAAIAAAD6//v/BQAPAAEAAAD5//v/BQAPAAEAAAD4//v/BQAPAAEAAAD3//v/BQAPAAEAAAD6//z/BQAQAAEAAAD3//r/BQAPAAEAAAD4//r/BQAPAAEAAAD5//r/BQAPAAEAAAD6//r/BQAPAAEAAAD7//r/BQAPAAEAAAD8//r/BQAPAAEAAAD9//r/BQAPAAEAAAD+//r/BQAPAAEAAAD6//3/BQAQAAIAAAD5//3/BQAPAAIAAAD5//z/BQAPAAEAAAD4//z/BQAPAAEAAAD3//z/BQAPAAEAAAD3//3/BQAPAAEAAAD3//7/BQAPAAEAAAD3////BQAPAAEAAAD3/wAABQAPAAEAAAD3/wEABQAPAAEAAAD4/wEABQAPAAEAAAD4/wAABQAPAAEAAAD4////BQAPAAEAAAD4//7/BQAPAAEAAAD4//3/BQAPAAEAAAAIAAIABQAFAAAAAAD9/wIABQAHAAAAAAD//wIABQAFAAAAAAD8/wIABQAEAAAAAAAHAAIABQAEAAAAAAAFAAIABQAGAAAAAAALAAIABQAGAAAAAAD7/wIABQAGAAAAAAD7//z/BQAIAAIAAAAFAPz/BQAIAAIAAAALAP7/BQAIAAIAAAAGAPz/BQAEAAIAAAD8//z/BQAGAAIAAAD6//7/BQAGAAIAAAD5//7/BQAFAAIAAAD///z/BQAFAAIAAAD+//z/BQAEAAIAAAD8//7/BQAIAAQAAAAGAAEABQAIAAMAAAAHAP//BQAGAAQAAAAIAP//BQAHAAQAAAD9/wAABQAGAAMAAAD+/wAABQAHAAMAAAA=")
+tile_set = SubResource("TileSet_oa1go")
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_option_pressed"]

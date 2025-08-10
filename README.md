@@ -29,7 +29,7 @@ SOUNDS:
 - [Walking sfx]
 	- ()
 	- (https://freesound.org/people/sturmankin/sounds/273110/)
-- [Typing](https://freesound.org/people/Sky_Motion/sounds/416777/)
+- [Diaglog](https://ad-sounds.itch.io/dialog-text-sound-effects)
 	
 FONTS:
 - [Diaglog](https://tinyworlds.itch.io/free-pixel-font-thaleah)
