@@ -1,8 +1,6 @@
 class_name Die
 extends PlayerState
 
-@export var dialog_key := "long fall"
-
 @onready var die_timer: Timer = $"../../Timers/DieTimer"
 @onready var impact_sfx: AudioStreamPlayer = $"../../Sfx/Impact"
 
@@ -14,7 +12,10 @@ func enter_state() -> void:
 	player.input_enabled = false
 	die_timer.start(DIE_TIME)
 	impact_sfx.play()
-	SignalBus.emit_signal("display_dialog", dialog_key)
+	if player.global_position.y > 100.0:
+		SignalBus.emit_signal("display_dialog", "beginning")
+	else:
+		SignalBus.emit_signal("display_dialog", "long fall")
 
 
 func exit_state() -> void:
@@ -25,7 +26,6 @@ func update_state(delta: float) -> void:
 	handle_animation()
 	if die_timer.is_stopped():
 		player.change_state(states.idle)
-	#print(die_timer.get_time_left())
 
 
 func handle_animation():

@@ -1,17 +1,39 @@
 {
 	"long fall": [
-		"Well you did it once. I'm sure you can do it again.",
 		"Damn. You were doing so well too.",
 		"Aww. Did you fall so we get to spend more time together?",
-		"Oh…. So close.",
+		"Oh… So close…",
 		"Maybe it will go better this time?",
 		"Ah… and you were almost there too.",
-		"For future reference, you are supposed to jump there.",
+		"For future reference… you are supposed to jump there.",
 		"Have you tried not falling?",
-		"Friendly reminder, go up.",
+		"Friendly reminder… go up.",
 		"That was just…… Yikes…",
-		"I mean if you want to try this part again, that’s fine by me.",
-		"Ha"
+		"I mean if you want to try this part again, thats fine by me.",
+		"Ha",
+		"Yep… Gravity still works.",
+		"Was that part of the plan?",
+		"Again? Impressive consistency.",
+		"I blinked… what happened?",
+		"You call that a jump?",
+		"Youre really exploring every possible way down.",
+		"Well that was one way to do it. Not the right way. But a way.",
+		"Im starting to think you like falling.",
+		"Remember when you werent falling? Me neither.",
+		"That platform you missed? It misses you too.",
+		"At this rate, youll reach the bottom faster than intended.",
+		"Maybe try jumping… but like better.",
+		"Good news. Youre really good at the falling part.",
+		"You do realize the goal is to stay on the platform, right?",
+		"No worries, nobody saw that. Except me. And Ill remember forever."
 	],
-	"beginning": []
+	"beginning": [
+		"Correct me if Im wrong… but I believe this is where we started.",
+		"Full circle, huh?",
+		"Ah, the start. Like nothing ever happened",
+		"How nostalgic.",
+		"At least the scenerys familiar.",
+		"Back here already?",
+		"This part again? You must really like it."
+	]
 }

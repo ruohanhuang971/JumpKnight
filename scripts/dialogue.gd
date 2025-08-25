@@ -17,7 +17,7 @@ var index := -1
 
 
 func _ready() -> void:
-	await get_tree().create_timer(1.0).timeout
+	# await get_tree().create_timer(1.0).timeout
 	scene_text = load_scene_text()
 	SignalBus.connect("display_dialog", Callable(self, "on_display_dialog"))
  
@@ -31,9 +31,9 @@ func load_scene_text():
 
 
 func show_text():
-	var new_index = _random_number_gen.randf_range(0, selected_text.size())
-	while new_index == index: 
-		new_index = _random_number_gen.randf_range(0, selected_text.size())
+	var new_index = _random_number_gen.randi_range(0, selected_text.size() - 1)
+	while new_index == index and selected_text.size() > 1:
+		new_index = _random_number_gen.randi_range(0, selected_text.size() - 1)
 	index = new_index
 	var line = selected_text[new_index]
 	update_message(line)
@@ -49,6 +49,7 @@ func next_line():
 func finish():
 	content.text = ""
 	voice_player.stop()
+	in_progress = false
 
 
 func on_display_dialog(text_key):
@@ -72,6 +73,19 @@ func update_message(message: String) -> void:
 
 func _on_type_typer_timeout() -> void:
 	if content.visible_characters < content.text.length():
+		# content.visible_characters += 1
+		var next_chars = content.text[content.visible_characters]
+		# Check if it's '...'
+		if next_chars == "…" or next_chars == "." or next_chars == "?":
+			# Pause typing briefly
+			content.visible_characters += 1
+			type_timer.stop()
+			voice_player.stop()
+			await get_tree().create_timer(0.5).timeout
+			type_timer.start()
+			voice_player.custom_play(0)
+			return
+		# Otherwise, just show next character
 		content.visible_characters += 1
 	else:
 		type_timer.stop()
@@ -87,3 +101,4 @@ func _on_audio_stream_player_finished() -> void:
 
 func _on_pause_timer_timeout() -> void:
 	content.text = ""
+	in_progress = false

@@ -16,6 +16,8 @@ extends CharacterBody2D
 
 @onready var fall_sfx: AudioStreamPlayer = $Sfx/Fall
 
+@onready var pause_menu: Control = $"../CanvasLayer/PauseMenu"
+
 # Physics variables
 const RUN_SPEED := 300
 const ACCELERATION := 30
@@ -66,10 +68,17 @@ const DIE_HEIGHT := 500
 
 const WALL_PUSH := 30
 
+var paused: bool = false
+
 #endregion
 
 
 func _ready() -> void:
+	# load position
+	#var pos = Save.load_data()
+	#global_position = pos
+	#SignalBus.connect("pause", Callable(self, "on_pause"))
+	
 	# init animation tree
 	animation_tree.active = true
 	
@@ -200,3 +209,16 @@ func handle_wall_bump():
 			velocity.x += WALL_PUSH
 		elif ray_cast_right.is_colliding():
 			velocity.x -= WALL_PUSH
+
+func on_pause(is_paused):
+	print("Pause signal received:", is_paused)
+	if is_paused:
+		Save.save(position)
+	else:
+		global_position = Save.load_data()
+
+# save position
+func _notification(what: int) -> void:
+	if what == NOTIFICATION_WM_CLOSE_REQUEST:
+		Save.save(global_position)
+		get_tree().quit()
