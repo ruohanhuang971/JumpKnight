@@ -6,7 +6,7 @@ SPRITES:
 
 - [Forest Spritesheet](https://pixelhouse.itch.io/underground-world-pixel-tile-sprite16x16)
 - [Dungeon Spritesheet](https://incolgames.itch.io/dungeon-platformer-tile-set-pixel-art)
-- [Castle Spritesheet](https://crumpaloo.itch.io/whimsy-hallow)
+- [Castle Spritesheet](https://raou.itch.io/dark-dun)
 
 SOUNDS:
 - [Jump sfx](https://freesound.org/people/LloydEvans09/sounds/187025/)

@@ -612,7 +612,8 @@ theme_override_icons/grabber_highlight = SubResource("ImageTexture_hrgik")
 theme_override_styles/slider = SubResource("StyleBoxFlat_2mid4")
 theme_override_styles/grabber_area = SubResource("StyleBoxFlat_x6sq6")
 theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_x6sq6")
-value = 100.0
+max_value = 1.0
+step = 0.01
 
 [node name="Resolution" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -649,12 +650,12 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_e7w18")
 theme_override_styles/normal = SubResource("StyleBoxFlat_laan2")
 selected = 2
 item_count = 4
-popup/item_0/text = "1920x1080"
-popup/item_0/id = 0
+popup/item_0/text = "1280x720"
+popup/item_0/id = 2
 popup/item_1/text = "1600x900"
 popup/item_1/id = 1
-popup/item_2/text = "1280x720"
-popup/item_2/id = 2
+popup/item_2/text = "1920x1080"
+popup/item_2/id = 0
 popup/item_3/text = "Full Screen"
 popup/item_3/id = 3
 

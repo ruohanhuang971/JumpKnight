@@ -3,6 +3,9 @@ extends Node2D
 var save_path = "user://variable.save"
 var player_pos := Vector2(-117.0, 129.0)
 
+var volume: float = 100
+var resolution_index: int = 0
+
 func _ready() -> void:
 	get_tree().auto_accept_quit = false
 

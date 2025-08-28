@@ -509,18 +509,23 @@ scale = Vector2(1, 0.2)
 
 [node name="Jump" type="AudioStreamPlayer" parent="Sfx"]
 stream = ExtResource("14_4r5pv")
+bus = &"sfx"
 
 [node name="Impact" type="AudioStreamPlayer" parent="Sfx"]
 stream = ExtResource("15_i4ail")
 pitch_scale = 1.5
+bus = &"sfx"
 
 [node name="Run" type="AudioStreamPlayer" parent="Sfx"]
 stream = ExtResource("16_i4ail")
 pitch_scale = 1.01
+bus = &"sfx"
 parameters/looping = true
 
 [node name="Fall" type="AudioStreamPlayer" parent="Sfx"]
 stream = ExtResource("17_a38lo")
 volume_db = -15.0
+bus = &"sfx"
 
 [node name="Bonk" type="AudioStreamPlayer" parent="Sfx"]
+bus = &"sfx"

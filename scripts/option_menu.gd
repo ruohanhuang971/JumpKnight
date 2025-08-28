@@ -1,13 +1,26 @@
 extends Control
 
 var save_path = "user://variable.save"
+@onready var resolution_dropdown: OptionButton = $Resolution/OptionButton
+@onready var volume_slider: HSlider = $Audio/HSlider
+
+func _ready():
+	# Sync UI from stored values
+	volume_slider.value = Save.volume
+	var db = linear_to_db(volume_slider.value)
+	AudioServer.set_bus_volume_db(0, db)
+	resolution_dropdown.select(Save.resolution_index)
+
 
 func _on_volume_value_changed(value: float) -> void:
-	AudioServer.set_bus_volume_db(0, value)
+	var db = linear_to_db(value)
+	print(value, db)
+	AudioServer.set_bus_volume_db(0, db)
+	Save.volume = value
 
 
 func _on_option_button_item_selected(index: int) -> void:
-	print(index)
+	Save.resolution_index = index
 	match index:
 		0:
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
