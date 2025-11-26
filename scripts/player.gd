@@ -70,6 +70,7 @@ const WALL_PUSH := 30
 
 var paused: bool = false
 
+var current_wind: Vector2 = Vector2.ZERO
 #endregion
 
 
@@ -111,6 +112,7 @@ func _physics_process(delta: float) -> void:
 	handle_player_movement()
 	handle_jump()
 	
+	velocity += current_wind * delta
 	move_and_slide()
 	
 	prev_velocity = velocity
@@ -222,3 +224,11 @@ func _notification(what: int) -> void:
 	if what == NOTIFICATION_WM_CLOSE_REQUEST:
 		Save.save(global_position)
 		get_tree().quit()
+
+
+func apply_wind(wind_force: Vector2):
+	current_wind = wind_force
+
+
+func remove_wind():
+	current_wind = Vector2.ZERO

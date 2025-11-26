@@ -451,9 +451,6 @@ parameters/conditions/is_falling = false
 parameters/conditions/is_moving = false
 parameters/conditions/jump = false
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position_smoothing_enabled = true
-
 [node name="Dialogue" parent="." instance=ExtResource("6_fulsm")]
 
 [node name="StateMachine" type="Node" parent="."]

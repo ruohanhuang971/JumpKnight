@@ -14,6 +14,7 @@ SOUNDS:
 - [Land sfx](https://freesound.org/people/Cat-Fox_Alex/sounds/818002/)
 - [Walking sfx](https://freesound.org/people/sturmankin/sounds/273110/)
 - [Diaglog](https://ad-sounds.itch.io/dialog-text-sound-effects)
-	
+- [Wind sfx](https://freesound.org/people/jorge0000/sounds/361053/)
+
 FONTS:
 - [Diaglog](https://tinyworlds.itch.io/free-pixel-font-thaleah)
