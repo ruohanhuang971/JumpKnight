@@ -2253,7 +2253,7 @@ scale = Vector2(12.225, 55)
 shape = SubResource("RectangleShape2D_4mrxx")
 
 [node name="player" parent="." instance=ExtResource("2_rwgxs")]
-position = Vector2(-331, -10474)
+position = Vector2(-380, -10446)
 scale = Vector2(4, 4)
 
 [node name="FallingPlateforms" type="Node" parent="."]
@@ -2264,6 +2264,10 @@ scale = Vector2(3.305, 5)
 
 [node name="Falling Plateform2" parent="FallingPlateforms" instance=ExtResource("4_k0juu")]
 position = Vector2(-353, -5065)
+scale = Vector2(3, 5)
+
+[node name="Falling Plateform8" parent="FallingPlateforms" instance=ExtResource("4_k0juu")]
+position = Vector2(300, -4554)
 scale = Vector2(3, 5)
 
 [node name="Falling Plateform3" parent="FallingPlateforms" instance=ExtResource("4_k0juu")]
